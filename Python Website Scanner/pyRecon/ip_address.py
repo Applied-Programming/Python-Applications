@@ -1,12 +1,12 @@
 #in linux
-#command host thenewboston.com gets the ip address
-#host thenewboston.com
-#thenewboston.com has address 54.186.250.79
+#command host fcbarcelona.com gets the ip address
+#host fcbarcelona.com
+#fcbarcelona.com has address 54.186.250.79
 
 #in windows
-#command ping thenewboston.com gets the ip address
-#host thenewboston.com
-#thenewboston.com has address 54.186.250.79
+#command ping fcbarcelona.com gets the ip address
+#host fcbarcelona.com
+#fcbarcelona.com has address 54.186.250.79
 
 import os
 
@@ -31,7 +31,7 @@ def get_ip_address(url):
     return results[marker:marker2].splitlines()[0]  #splitlines()[0] returns the top line with the 1st ip address of the site that has multiple ip addresses
 
 
-print(get_ip_address('thenewboston.com'))
+print(get_ip_address('fcbarcelona.com'))
 #print(get_ip_address('google.com'))
 
 

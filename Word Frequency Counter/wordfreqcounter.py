@@ -5,9 +5,9 @@ import operator
 def start(url):
     word_list = []
     source_code = requests.get(url).text
-    soup = BeautifulSoup(source_code)
-    for post_text in soup.findAll('a', {'class': 'item-name'}):
-        content = post_text.string
+    soup = BeautifulSoup(source_code, "html.parser")
+    for post_text in soup.findAll('div', {'class': 'head'}):
+        content = post_text.get_text()
         words = content.lower().split()
         for each_word in words:
             word_list.append(each_word)
@@ -34,5 +34,5 @@ def create_dictionary(clean_word_list):
         for key,value in sorted(word_count.items(), key=operator.itemgetter(1)):
             print(key,value)
 
-start('https://buckysroom.org/tops.php?type=text&period=this-month')
+start('http://www.snapdeal.com/product/apple-macbook-pro-13-inch/199160/reviews?page=5')
 

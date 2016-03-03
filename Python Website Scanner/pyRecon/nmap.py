@@ -6,4 +6,5 @@ def get_namp(options, ip):
     results = str(process.read())
     return results
 
-print(get_namp('-F','54.186.250.79'))
+#print(get_namp('-F','Here-enter-the-ip-address-of-the-website-you-are-scanning'))
+print(get_namp('-F','176.34.188.253'))

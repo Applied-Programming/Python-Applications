@@ -26,4 +26,4 @@ def create_report(name, url, domain_name, nmap, robots_txt, whois):
     write_file(project_dir + '/whois.txt' , whois)
 
 
-gather_info('thenewboston.com', 'https://thenewboston.com')
+gather_info('fcbarcelona.com', 'https://fcbarcelona.com')
