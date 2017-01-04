@@ -8,12 +8,12 @@ def Main():
     s = socket.socket()  # create a socket object
     s.connect((host,port))  # connect to the server
 
-    message = input("-> ")
+    message = str(input("-> "))
     while message != 'q':
         s.send(message.encode('utf-8'))  # send message
         data = s.recv(1024).decode('utf-8')
         print("Received from server : " + data)
-        message = input("-> ")
+        message = str(input("-> "))
     s.close()
 
 
